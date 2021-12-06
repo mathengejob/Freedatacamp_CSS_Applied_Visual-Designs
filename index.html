@@ -1,0 +1,76 @@
+<style>
+  body{
+   background:#E1E7EB
+  }
+.loadingLine {
+    width: 100%;
+    #border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px 5px;
+    padding: 4px;
+    position:relative;
+    top:80%;
+    animation-name: fade;
+    animation-duration: 10s;
+    text-align:centre;
+  }
+  .text{
+    text-align: center;
+  }
+   @keyframes fade {
+    0% {
+      right: 100%;
+    }
+    50%
+    {
+      right:50%;
+    }
+    100%
+    {
+      right:0%;
+    }
+  }
+  .balls {
+    border-radius: 50%;
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 60%;
+    box-shadow: 0 20px 30px rgba(0,0,0,0.19), 0 6px    6px rgba(0,0,0,0.23);
+    animation-name: jump;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  #red {
+background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(91,7,24,1) 100%);
+left: 25%;
+    animation-timing-function: linear;
+  }
+  #blue {
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(10,37,70,1) 100%);
+    left: 50%;
+    animation-timing-function: ease-out;
+  }
+  #green {
+  background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(116,81,5,1) 100%);
+
+    left: 75%;
+    animation-timing-function: cubic-bezier(0.311, 0.441, 0.444, 1.649);
+  }
+
+  @keyframes jump {
+    50% {
+      top: 10%;
+    }
+  }
+</style>
+<body>
+ <h2 class="text">CSS Animations </h2>
+<div class="balls" id="red"></div>
+<div class="balls" id="blue"></div>
+<div class="balls" id="green"></div>
+ <div class="loadingLine"><hr>
+<str> 100%...</str>
+ </div>
+
+</body>
